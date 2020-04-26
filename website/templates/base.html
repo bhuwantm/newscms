@@ -36,20 +36,11 @@
 
 <div class="container-fluid">
 
-    <div class="mgt30 row">
-        <div class="col-md-8 vsls-container">
-            {% include 'widgets/vertical_scrolling_list.html' with id='bkNews' title='Breaking News' title_bg='bg-red' %}
-            {% include 'widgets/vertical_scrolling_list.html' with id='IntNews' title='International News' title_bg='bg-regular' %}
-        </div>
-    </div>
-
     <div class="content">
         {% block content %}{% endblock %}
     </div>
 
-
     {% block content_bottom %} {% endblock %}
-
 
 </div>
 

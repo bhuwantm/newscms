@@ -1,0 +1,23 @@
+<div class="row vsl-container">
+    <div class="col-md-4">
+        <div class="vsl-title {{ title_bg }}">{{ title }}</div>
+    </div>
+    <div class="col-md-8 bg-lightgrey">
+        <ul class="slick-vsingle" id="{{ id }}">
+            <li><a href="#" class="text-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+            <li><a href="#" class="text-regular">Welcome to Colorlib Family.</a></li>
+            <li><a href="#" class="text-regular">Nam eu metus sitsit amet, consec!</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    $('#{{ id }}').slick({
+        slide: 'li',
+        autoplay: true,
+        vertical: true,
+        verticalSwiping: true,
+        arrows: false
+    });
+</script>
+

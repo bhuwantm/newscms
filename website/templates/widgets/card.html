@@ -1,0 +1,19 @@
+{% load static %}
+<div class="card-deck row">
+    {% for news in news_list %}
+    <div class="card col-md-3 px-0">
+        <img class="card-img-top" src="{% get_media_prefix %}{{news.presentation_image}}" alt="Card image cap">
+        <div class="card-body">
+            <h4 class="card-title">{{ news.title }}</h4>
+            <h5 class="text">{{ news.date }}</h5>
+            <p class="card-text text-fade">{{ news.summary }}</p>
+            <a href="{% url 'single_page' news.id %}">Details</a>
+        </div>
+        <div class="card-footer text-fade news-counters">
+            <div><i class="far fa-thumbs-up"></i> {{ news.likes_counter }}</div>
+            <div><i class="far fa-eye"></i> {{ news.views_counter }}</div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+

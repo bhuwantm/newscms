@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>{% block title %}{% endblock %}</title>
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'vendors/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'vendors/font_awesome/all.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'vendors/slick/slick-theme.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/utils.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}"/>
+
+    <script src="{% static 'vendors/jquery-3.3.1.min.js'%}"></script>
+    <script src="{% static 'vendors/popper.min.js'%}"></script>
+    <script src="{% static 'vendors/bootstrap.min.js'%}"></script>
+    <script src="{% static 'vendors/slick/slick.min.js'%}"></script>
+
+
+    {% block heads %}{% endblock %}
+</head>
+
+<body>
+
+{% include 'includes/top_navbar.html' %}
+
+<div class="container-fluid">
+
+    <div class="mgt30 row">
+        <div class="col-md-8 vsls-container">
+            {% include 'widgets/vertical_scrolling_list.html' with id='bkNews' title='Breaking News' title_bg='bg-red' %}
+            {% include 'widgets/vertical_scrolling_list.html' with id='IntNews' title='International News' title_bg='bg-regular' %}
+        </div>
+    </div>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+
+    {% block content_bottom %} {% endblock %}
+
+
+</div>
+
+
+<div class="container-fluid">
+    {% include 'includes/footer.html' %}
+</div>
+
+{% block footer %}{% endblock %}
+</body>
+
+</html>

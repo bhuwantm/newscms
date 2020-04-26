@@ -1,0 +1,232 @@
+body{
+    background: #fff;
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    color: #67757c;
+}
+
+.nav-link{
+    font-size: 20px !important;
+}
+
+.content{
+    min-height: 100vh;
+    transition: all 0.3s;
+    align-items: stretch;
+    flex: 1;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: 'PT Sans', sans-serif;
+    color: #ef3e36;
+    text-transform: uppercase;
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+h4{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+h5{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.navbar-logo{
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.navbar-logo img{
+    width: 100%;
+}
+
+.vsls-container div:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.vsl-container{
+    height: 2.2rem;
+}
+
+.vsl-title{
+    height: 2.2rem;
+    line-height: 2.2rem;
+    text-align: center;
+    font-weight: 500;
+    color: #fff;
+}
+
+.slick-vsingle{
+    overflow: hidden;
+}
+
+.slick-vsingle li{
+    height: 2.2rem;
+    line-height: 2.2rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.slick-vsingle li a:hover{
+    text-decoration: none;
+    color: #ef3e36;
+}
+
+
+.card-title{
+    text-transform: uppercase;
+}
+
+.news-counters{
+    display: flex;
+}
+
+.news-counters>div{
+    margin-right: 15px;
+}
+
+.news-counters>div i{
+    margin-right: 5px;
+}
+
+
+.list-item-lg:not(:last-child){
+    border-bottom: 1px solid #ccc;
+}
+
+.list-item-lg:last-child{
+    padding-bottom: 0px !important;
+}
+
+.list-item-lg:first-child{
+    padding-top: 0px !important;
+}
+
+
+
+.list-item-lg{
+    display: flex;
+}
+
+.list-item-lg:hover{
+    text-decoration: none;
+}
+
+.list-item-lg .img-container{
+    flex: 0 0 100px;
+    max-width: 100px;
+    width: 100px;
+    margin-right: 10px;
+}
+
+.list-item-lg .img-container img{
+    width: 100%;
+}
+
+.list-item-lg .details-container{
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.list-item-lg .details-container .details-body{
+    max-height: 42px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.list-item-lg .details-container h5{
+    max-height: 15px;
+    text-overflow: ellipsis;
+}
+
+.subtitle{
+    font-size: 0.7rem;
+    color: #828282;
+    font-weight: normal !important;
+    text-transform: uppercase;
+}
+
+.pin-item{
+    line-height: 1.4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+footer {
+    font-weight: 400;
+    font-size: 0.9rem;
+    overflow-x: hidden;
+    color: #607289;
+    background: #02031c;
+}
+
+footer a{
+  color: #818494;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+footer a:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.rich-text *{
+    text-transform: none;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.5rem;
+}
+
+.rich-text p {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+.ads-container img{
+    width: 100%;
+}
+
+.nav-social{
+    background: #ef3e36;
+    color: #fff;
+}
+
+.social-links-hor li{
+    margin-left: 10px;
+}
+
+.social-links-hor li a{
+    color: #ededed;
+    font-size: 1.2rem;
+}

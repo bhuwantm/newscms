@@ -1,0 +1,63 @@
+<script>
+    function get_page_url(pageNo){
+        page_url = new URL(window.location.href);
+        if(page_url.searchParams.has('page')){
+            page_url.searchParams.set('page', pageNo);
+        }else{
+            page_url.searchParams.append('page',pageNo);
+        };
+        window.location = page_url;
+    }
+</script>
+
+{% if lst_page %}
+<div class="clearfix mt-4">
+    <ul class="pagination">
+        {% if lst_page.has_previous %}
+        <li class="page-item">
+            <a class="page-link" onclick="get_page_url({{ lst_page.previous_page_number }})">Perv</a>
+        </li>
+        {% endif %}
+
+        {% if lst_page.paginator.num_pages <= 7 %}
+            {% for page in lst_page.paginator.page_range %}
+                <li class="page-item {% if lst_page.number == page  %}active{% endif %}">
+                    <a class="page-link" onclick="get_page_url({{page}})">{{ page }}</a>
+                </li>
+            {% endfor %}
+        {% else %}
+            {% for page in lst_page.paginator.page_range %}
+
+                {% if lst_page.number > 4 and page == 1 %}
+                    <li class="page-item {% if lst_page.number == page  %}active{% endif %}">
+                        <a class="page-link" onclick="get_page_url({{page}})">{{ page }}</a>
+                    </li>
+                    <li>
+                        <a class="page-link" href="#">....</a>
+                    </li>
+                {% elif page >= lst_page.number|add:"-3" and page <= lst_page.number|add:"3" %}
+                     <li class="page-item {% if lst_page.number == page  %}active{% endif %}">
+                        <a class="page-link" onclick="get_page_url({{page}})">{{ page }}</a>
+                    </li>
+                {% elif lst_page.number < lst_page.paginator.num_pages|add:"-3" and page == lst_page.paginator.num_pages %}
+                    <li>
+                        <a class="page-link" href="#">....</a>
+                    </li>
+                    <li class="page-item {% if lst_page.number == page  %}active{% endif %}">
+                        <a class="page-link" onclick="get_page_url({{page}})">{{ page }}</a>
+                    </li>
+                {% endif %}
+
+            {% endfor %}
+        {% endif %}
+
+        {% if lst_page.has_next %}
+        <li class="page-item">
+            <a class="page-link" onclick="get_page_url({{ lst_page.next_page_number }})">Next</a>
+        </li>
+        {% endif %}
+    </ul>
+</div>
+{% else %}
+    <div class="clearfix mt-4">कुनै समाचार उपलब्ध छैन</div>
+{% endif %}

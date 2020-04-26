@@ -1,0 +1,9 @@
+{% load static %}
+
+{% for ads in ads_list %}
+<div class="mb-3 ads-container">
+    <a href="{{ ads.url }}">
+        <img src="{% get_media_prefix %}{{ads.presentation_image}}" alt="NA">
+    </a>
+</div>
+{% endfor %}

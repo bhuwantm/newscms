@@ -1,0 +1,13 @@
+<div class="mb-3 p-4 bg-lightgrey">
+    <h3>{{ title }}</h3>
+    <hr/>
+    {% for news in news_list %}
+    <a href="{% url 'single_page' news.id  %}" class="d-flex pin-item mb-3 mt-3">
+        <div class="d-inline-block mr-2 text-red">{{ forloop.counter }}.</div>
+        <div class="text-regular">
+            {{ news.synopsis }}
+            <div class="subtitle">{{ news.date }}</div>
+        </div>
+    </a>
+    {% endfor %}
+</div>

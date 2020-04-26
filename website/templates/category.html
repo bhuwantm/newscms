@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="mgt30 row">
+        <div class="col-lg-12">
+            {% include 'widgets/card.html' with news_list=news_list %}
+            {% include 'widgets/_paginator.html' with lst_page=news_list  %}
+        </div>
+    </div>
+
+{% endblock %}

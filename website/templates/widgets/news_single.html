@@ -1,0 +1,21 @@
+<div class="col-md-12">
+
+    <h1 class="text-regular">{{ news.title }}</h1>
+    {% if news.author %}
+        <h5>
+            <span class="text-fade mr-1">By:</span>
+            {{ news.author }}
+        </h5>
+    {% endif %}
+    <h5 class="mb-4">
+        <span class="mr-1">{{ news.date }}</span>
+        |
+        <span class="ml-1">{{ news.category.name }}</span>
+    </h5>
+
+    <div class="rich-text">
+        {{ news.body|safe }}
+    </div>
+
+    <hr class="col-md-12 dark" />
+</div>

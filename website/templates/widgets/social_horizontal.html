@@ -1,0 +1,41 @@
+{% if social_links %}
+<ul class="d-flex justify-content-end mb-0 social-links-hor">
+
+    {% if social_links.youtube %}
+    <li>
+        <a href="{{ social_links.youtube }}"><i class="fab fa-youtube"></i></a>
+    </li>
+    {% endif %}
+
+    {% if social_links.facebook %}
+    <li>
+        <a href="{{ social_links.facebook }}"><i class="fab fa-facebook-f"></i></a>
+    </li>
+    {% endif %}
+
+    {% if social_links.instagram %}
+    <li>
+        <a href="{{ social_links.instagram }}"><i class="fab fa-instagram"></i></a>
+    </li>
+    {% endif %}
+
+    {% if social_links.twitter %}
+    <li>
+        <a href="{{ social_links.twitter }}"><i class="fab fa-twitter"></i></a>
+    </li>
+    {% endif %}
+
+    {% if social_links.linkedin %}
+    <li>
+        <a href="{{ social_links.linkedin }}"><i class="fab fa-linkedin"></i></a>
+    </li>
+    {% endif %}
+
+    {% if social_links.reddit %}
+    <li>
+        <a href="#"><i class="fab fa-reddit"></i></a>
+    </li>
+    {% endif %}
+
+</ul>
+{% endif %}

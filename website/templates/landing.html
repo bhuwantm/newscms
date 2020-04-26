@@ -1,0 +1,31 @@
+{% extends 'base_two.html' %}
+
+{% block content_left %}
+    <div>
+        <h1 class="mb-4">Headlines</h1>
+        <hr class="dark"/>
+
+        {% for headline in headline_list %}
+            <div class="mb-4 row">
+                {% include 'widgets/news_single.html' with news=headline %}
+            </div>
+        {% endfor %}
+
+    </div>
+
+{% endblock %}
+
+
+{% block content_middle %}
+    {% include 'widgets/list_item_lg.html' with title='ताजा समाचार' news_list=recent_list %}
+    {% include 'widgets/pin_board.html' with title='पाइन्ड समाचार' news_list=pinned_list %}
+{% endblock %}
+
+{% block content_right %}
+    {% include 'widgets/ads.html' with ads=ads_list %}
+{% endblock %}
+
+
+{% block content_bottom %}
+    {% include 'widgets/card.html' with news_list=news_list %}
+{% endblock %}

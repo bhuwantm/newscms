@@ -1,0 +1,47 @@
+[
+  {
+    "model": "news.Tags",
+    "pk": 1,
+    "fields": {
+      "name": "Hot",
+      "display_name": "Hot",
+      "is_default": true
+    }
+  },
+  {
+    "model": "news.Tags",
+    "pk": 2,
+    "fields": {
+      "name": "Recent",
+      "display_name": "Recent",
+      "is_default": true
+    }
+  },
+  {
+    "model": "news.Tags",
+    "pk": 3,
+    "fields": {
+      "name": "Breaking",
+      "display_name": "Breaking",
+      "is_default": true
+    }
+  },
+  {
+    "model": "news.Tags",
+    "pk": 4,
+    "fields": {
+      "name": "Headline",
+      "display_name": "Headline",
+      "is_default": true
+    }
+  },
+  {
+    "model": "news.Tags",
+    "pk": 5,
+    "fields": {
+      "name": "Pinned",
+      "display_name": "Pinned",
+      "is_default": true
+    }
+  }
+]

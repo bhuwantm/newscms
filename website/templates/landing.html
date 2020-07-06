@@ -1,31 +1,20 @@
-{% extends 'base_two.html' %}
+{% extends 'base.html' %}
 
-{% block content_left %}
-    <div>
-        <h1 class="mb-4">Headlines</h1>
-        <hr class="dark"/>
+{% block content_top %}
 
-        {% for headline in headline_list %}
-            <div class="mb-4 row">
-                {% include 'widgets/news_single.html' with news=headline %}
-            </div>
-        {% endfor %}
+    {% if headline_list %}
+        {% include 'widgets/news_block.html' with title='हेडलाईन समाचार' news_list=headline_list %}
+        {% include 'widgets/ads_x.html' with ads=ads_list %}
+    {% endif %}
 
-    </div>
+    {% if recent_list %}
+        {% include 'widgets/news_block.html' with title='भर्खरको समाचार' news_list=recent_list %}
+        {% include 'widgets/ads_x.html' with ads=ads_list %}
+    {% endif %}
 
 {% endblock %}
-
-
-{% block content_middle %}
-    {% include 'widgets/list_item_lg.html' with title='ताजा समाचार' news_list=recent_list %}
-    {% include 'widgets/pin_board.html' with title='पाइन्ड समाचार' news_list=pinned_list %}
-{% endblock %}
-
-{% block content_right %}
-    {% include 'widgets/ads.html' with ads=ads_list %}
-{% endblock %}
-
 
 {% block content_bottom %}
+    <h1 class="mb-4">अन्य समाचार</h1>
     {% include 'widgets/card.html' with news_list=news_list %}
 {% endblock %}

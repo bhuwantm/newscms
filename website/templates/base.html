@@ -34,14 +34,14 @@
 
 {% include 'includes/top_navbar.html' %}
 
-<div class="container-fluid">
+<div>
+    <div class="content content-wrapper mt-5">
+        {% block content_top %}{% endblock %}
 
-    <div class="content">
-        {% block content %}{% endblock %}
+        <div class="mt-5">
+            {% block content_bottom %} {% endblock %}
+        </div>
     </div>
-
-    {% block content_bottom %} {% endblock %}
-
 </div>
 
 

@@ -1,0 +1,16 @@
+<h1 class="mb-4 mt-5">{{title}}</h1>
+<hr/>
+<div class="mgt30 row">
+    <div class="col-lg-8">
+        <div>
+            {% for news in news_list %}
+                <div class="mb-4 row">
+                    {% include 'widgets/news_single_summary.html' with news=news %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col-lg-4 pl-4">
+        {% include 'widgets/list_widget.html' with title='अन्य '|add:title news_list=news_list %}
+    </div>
+</div>

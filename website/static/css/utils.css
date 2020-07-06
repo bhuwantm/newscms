@@ -79,11 +79,25 @@
 }
 
 .bg-blue{
-    background: #075d9b;
+    background: #3A6CC8;
 }
 
 .bg-regular{
     background-color: #152535;
+}
+
+.bg-base{
+    background: #42a5f5;
+    color: #fff;
+}
+
+.bg-base-light {
+    background: #80d6ff;
+}
+
+.bg-base-dark {
+    background: #0077c2;
+    color: #fff;
 }
 
 .text-offwhite{

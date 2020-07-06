@@ -3,20 +3,17 @@
     <h1 class="text-info mb-3">{{ news.title }}</h1>
 
     <div class="rich-text mb-2">
-        {{ news.body|safe }}
+        {{ news.summary|safe }}
     </div>
 
-    {% if news.author %}
-        <h5 class="text-fade">
-            <span class="mr-1">लेखक:</span>
-            {{ news.author }}
-        </h5>
-    {% endif %}
-
-    <h5 class="mb-4 text-fade">
+    <h5 class="mb-2">
         <span class="mr-1">{{ news.date }}</span>
         |
         <span class="ml-1">{{ news.category.display_name }}</span>
     </h5>
+
+    <div class="mb-4">
+        <a href="{% url 'single_page' news.id  %}">पूरा समाचार</a>
+    </div>
 
 </div>

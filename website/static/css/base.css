@@ -3,7 +3,8 @@ body{
     font-family: 'Noto Sans', sans-serif;
     margin: 0;
     overflow-x: hidden;
-    color: #67757c;
+    color: #555;
+    font-size: 1.2rem;
 }
 
 .nav-link{
@@ -19,32 +20,32 @@ body{
 
 h1, h2, h3, h4, h5{
     font-family: 'PT Sans', sans-serif;
-    color: #ef3e36;
+    color: #333;
     text-transform: uppercase;
 }
 
 h1{
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 600;
 }
 
 h2{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
 h3{
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     font-weight: 600;
 }
 
 h4{
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
 h5{
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 
@@ -114,57 +115,57 @@ ul{
 }
 
 
-.list-item-lg:not(:last-child){
+.list-widget:not(:last-child){
     border-bottom: 1px solid #ccc;
 }
 
-.list-item-lg:last-child{
+.list-widget:last-child{
     padding-bottom: 0px !important;
 }
 
-.list-item-lg:first-child{
+.list-widget:first-child{
     padding-top: 0px !important;
 }
 
-
-
-.list-item-lg{
+.list-widget{
     display: flex;
 }
 
-.list-item-lg:hover{
+.list-widget:hover{
     text-decoration: none;
 }
 
-.list-item-lg .img-container{
+.list-widget .img-container{
     flex: 0 0 100px;
     max-width: 100px;
     width: 100px;
     margin-right: 10px;
 }
 
-.list-item-lg .img-container img{
+.list-widget .img-container img{
     width: 100%;
 }
 
-.list-item-lg .details-container{
+.list-widget .details-container{
     flex: 1;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
 }
 
-.list-item-lg .details-container .details-body{
-    max-height: 42px;
+.list-widget .details-container .details-body{
+    max-height: 6rem;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-bottom: 0.5rem;
 }
 
-.list-item-lg .details-container h5{
+.list-widget .details-container h5{
     max-height: 15px;
     text-overflow: ellipsis;
 }
 
 .subtitle{
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: #828282;
     font-weight: normal !important;
     text-transform: uppercase;
@@ -217,11 +218,6 @@ footer a:hover {
     width: 100%;
 }
 
-.nav-social{
-    background: #ef3e36;
-    color: #fff;
-}
-
 .social-links-hor li{
     margin-left: 10px;
 }
@@ -229,4 +225,33 @@ footer a:hover {
 .social-links-hor li a{
     color: #ededed;
     font-size: 1.2rem;
+}
+
+.content-wrapper{
+    margin: 0px 5%;
+}
+
+.navbar{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar-cat{
+    padding: 0;
+}
+
+.navbar-cat .navbar-nav .nav-item .nav-link{
+    padding: 1rem 1rem;
+}
+
+.navbar-cat .navbar-nav .nav-item .nav-link:hover{
+    background: #f59242;
+}
+
+.navbar-cat .navbar-nav .nav-item .nav-link.active{
+    background: #f59242;
+}
+
+.navbar-cat .navbar-nav .nav-item:first-child{
+    margin-left: -1rem;
 }

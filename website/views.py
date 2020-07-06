@@ -10,14 +10,13 @@ class LandingPage(View):
         news_list = News.objects.all()
         headline_list = News.objects.filter(tags__in=Tags.objects.filter(name="Headline"))
         recent_list = News.objects.filter(tags__in=Tags.objects.filter(name="Recent"))
-        pinned_list = News.objects.filter(tags__in=Tags.objects.filter(name="Pinned"))
         ads_list = Ads.objects.all()
         return render(request, 'landing.html', {
             'news_list': news_list,
             'headline_list': headline_list,
-            'pinned_list': pinned_list,
             'recent_list': recent_list,
-            'ads_list': ads_list
+            'ads_list': ads_list,
+            'is_home': True
         })
 
 
@@ -36,4 +35,4 @@ class CategoryPage(GlobalPaginator, View):
         global_paginator = GlobalPaginator()
         paginated_list = global_paginator.get_list(all_news_list, page)
 
-        return render(request, 'category.html', {'news_list': paginated_list})
+        return render(request, 'category.html', {'news_list': paginated_list, 'cat': cat})

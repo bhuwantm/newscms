@@ -1,35 +1,48 @@
 {% load static %}
 
-<nav class="logo-container mb-2">
+<nav class="logo-container my-2">
     <a class="navbar-logo" href="{% url 'landing_page' %}">
         <img src="{% static 'images/logo_small.png' %}" />
     </a>
 </nav>
 
-<nav class="d-flex justify-content-between navbar nav-social">
-    <div>{% now "jS F Y" %}</div>
-    <div>
-        {% include "widgets/social_horizontal.html" %}
-    </div>
-</nav>
+<div class="bg-base-dark">
+    <nav class="d-flex justify-content-between navbar content-wrapper">
+        <div>{% now "jS F Y" %}</div>
+        <div>
+            {% include "widgets/social_horizontal.html" %}
+        </div>
+    </nav>
+</div>
 
-<nav class="navbar navbar-expand-md navbar-light bg-blue">
+<div class="bg-base">
+    <nav class="navbar navbar-expand-md navbar-light navbar-cat content-wrapper">
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link text-offwhite" href="{% url 'landing_page' %}">गृह पृष्ठ</a>
-            </li>
-            {% for category in category_list %}
-            <li class="nav-item">
-                <a class="nav-link text-offwhite" href="{% url 'category_page' category.id %}">{{ category.display_name }}</a>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-</nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    {% if is_home %}
+                        <a class="nav-link text-offwhite active" href="{% url 'landing_page' %}">गृह पृष्ठ</a>
+                    {% else %}
+                        <a class="nav-link text-offwhite" href="{% url 'landing_page' %}">गृह पृष्ठ</a>
+                    {% endif %}
+
+                </li>
+                {% for category in category_list %}
+                <li class="nav-item">
+                    {% if cat == category %}
+                        <a class="nav-link text-offwhite active" href="{% url 'category_page' category.id %}">{{ category.display_name }}</a>
+                    {% else %}
+                        <a class="nav-link text-offwhite" href="{% url 'category_page' category.id %}">{{ category.display_name }}</a>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>
+</div>

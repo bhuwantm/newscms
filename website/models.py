@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Social(models.Model):
     youtube = models.CharField(verbose_name="YouTube", max_length=200, null=True, blank=True)
     twitter = models.CharField(verbose_name="Twitter", max_length=200, null=True, blank=True)

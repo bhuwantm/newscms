@@ -1,0 +1,10 @@
+{% load static %}
+<div class="d-flex flex-wrap">
+    {% for ads in ads_list %}
+    <div class="mt-3 mb-3">
+        <a href="{{ ads.url }}">
+            <img src="{% get_media_prefix %}{{ads.presentation_image}}" alt="NA">
+        </a>
+    </div>
+    {% endfor %}
+</div>

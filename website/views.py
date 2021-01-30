@@ -22,13 +22,13 @@ class LandingPage(View):
 
 class SinglePage(View):
     def get(self, request, pk):
-        news = News.objects.get(id=pk)
+        news = News.objects.get(id=pk, category__is_active=True)
         return render(request, 'single.html', {'news': news})
 
 
 class CategoryPage(GlobalPaginator, View):
     def get(self, request, pk):
-        cat = NewsCategory.objects.get(id=pk)
+        cat = NewsCategory.objects.get(id=pk, is_active=True)
         all_news_list = cat.cat_news.all().order_by('date')
 
         page = request.GET.get('page')

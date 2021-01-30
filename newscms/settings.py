@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
 
+    'app_user',
     'newscms',
     'news',
     'website'
@@ -160,3 +161,5 @@ CKEDITOR_CONFIGS = {
         ]),
     }
 }
+
+AUTH_USER_MODEL = 'app_user.AppUser'

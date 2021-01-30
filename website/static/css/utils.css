@@ -119,3 +119,7 @@
 hr.dark{
     border-top: 1px solid #bbb;
 }
+
+.btn-link-no-decoration{
+    text-decoration: none !important;
+}

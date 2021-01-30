@@ -21,8 +21,19 @@ class LandingPage(View):
 
 
 class SinglePage(View):
+
+    def post(self, request, pk):
+        # use of api is highly recommended for this type of post
+        news = News.objects.get(id=pk, category__is_active=True)
+        if 'like' in request.POST:
+            news.likes_counter += 1
+            news.save()
+        return render(request, 'single.html', {'news': news})
+
     def get(self, request, pk):
         news = News.objects.get(id=pk, category__is_active=True)
+        news.views_counter += 1
+        news.save()
         return render(request, 'single.html', {'news': news})
 
 

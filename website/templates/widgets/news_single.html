@@ -6,9 +6,18 @@
         {{ news.body|safe }}
     </div>
 
+    <div class="mb-3">
+        <form method="POST">
+            {% csrf_token %}
+            <button name="like" class="btn btn-link p-0" type="submit">
+                <i class="far fa-thumbs-up"></i> Like this news
+            </button>
+        </form>
+    </div>
+
     {% if news.author %}
         <h5 class="text-fade">
-            <span class="mr-1">लेखक:</span>
+            <span class="mr-1">Author:</span>
             {{ news.author }}
         </h5>
     {% endif %}

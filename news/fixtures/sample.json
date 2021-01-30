@@ -1,0 +1,109 @@
+[
+  {
+    "model": "news.NewsCategory",
+    "pk": 1,
+    "fields": {
+      "name": "Politics",
+      "display_name": "Politics",
+      "description": "News about Politics"
+    }
+  },
+  {
+    "model": "news.NewsCategory",
+    "pk": 2,
+    "fields": {
+      "name": "Business",
+      "display_name": "Business",
+      "description": "News about Business"
+    }
+  },
+  {
+    "model": "news.NewsCategory",
+    "pk": 3,
+    "fields": {
+      "name": "Health",
+      "display_name": "Health",
+      "description": "News about Health"
+    }
+  },
+  {
+    "model": "news.NewsCategory",
+    "pk": 4,
+    "fields": {
+      "name": "Entertainment",
+      "display_name": "Entertainment",
+      "description": "News about Entertainment"
+    }
+  },
+  {
+    "model": "news.NewsCategory",
+    "pk": 5,
+    "fields": {
+      "name": "Sports",
+      "display_name": "Sports",
+      "description": "News about Sports"
+    }
+  },
+  {
+    "model": "news.NewsCategory",
+    "pk": 5,
+    "fields": {
+      "name": "Travels",
+      "display_name": "Travels",
+      "description": "News about Travels"
+    }
+  },
+  {
+    "model": "news.NewsCategory",
+    "pk": 5,
+    "fields": {
+      "name": "Travels",
+      "display_name": "Travels",
+      "description": "News about Travels"
+    }
+  },
+  {
+    "model": "news.Tags",
+    "pk": 1,
+    "fields": {
+      "name": "Headline",
+      "display_name": "Headline",
+      "description": "Headline tag"
+    }
+  },
+  {
+    "model": "news.Tags",
+    "pk": 2,
+    "fields": {
+      "name": "Recent",
+      "display_name": "Recent",
+      "description": "Recent tag"
+    }
+  },
+  {
+    "model": "news.Tags",
+    "pk": 2,
+    "fields": {
+      "name": "Recent",
+      "display_name": "Recent",
+      "description": "Recent tag"
+    }
+  },
+  {
+    "model": "news.News",
+    "pk": 1,
+    "fields": {
+      "category": 2,
+      "type": "National",
+      "author": "Bhagwan Thapa",
+      "title": "Stock market meets internet fringe culture",
+      "synopsis": "This past week has been a banner one for Reddit's island of misfit investors.",
+      "summary": "<p>This past week has been a banner one for Reddit&#39;s island of misfit investors.</p>\n\n<p>WallStreetBets exploded into the mainstream, moving from the front page of Reddit to the front page of the New York Times and nearly every other major news site. The subreddit&#39;s short-squeeze of Gamestop helped shoot up the price of the video game retailer&#39;s stock a mind-boggling 1,700% from the beginning of January to Wednesday (before it fell again Thursday), captivating the minds and wallets of investors &mdash; both casual and institutional &mdash; and financial regulators.</p>\n\n<p><iframe allow=\";\" allowfullscreen=\"\" frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/ZoPEaBAe0CY\" width=\"640\"></iframe></p>",
+      "date": "2021-01-30",
+      "body": "<h1>Stock market meets internet fringe culture</h1>\n\n<p>This past week has been a banner one for Reddit&#39;s island of misfit investors.</p>\n\n<p>WallStreetBets exploded into the mainstream, moving from the front page of Reddit to the front page of the New York Times and nearly every other major news site. The subreddit&#39;s short-squeeze of Gamestop helped shoot up the price of the video game retailer&#39;s stock a mind-boggling 1,700% from the beginning of January to Wednesday (before it fell again Thursday), captivating the minds and wallets of investors &mdash; both casual and institutional &mdash; and financial regulators.</p>\n\n<p><iframe allow=\";\" allowfullscreen=\"\" frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/ZoPEaBAe0CY\" width=\"640\"></iframe></p>\n\n<p>But while millions are now discovering WallStreetBets for the first time, it has been building momentum throughout the pandemic. One can trace its epic rise to a perfect storm of favorable conditions: the exponential growth of the app Robinhood and its no-fee-options trading,&nbsp;&nbsp;the extereme volatility&nbsp;Covid-19 brought to the markets, the stimulus checks mailed to millions of Americans, the lack of televised sports for much of the year, and the unwanted free time stuck at home the pandemic has forced on many people.</p>\n\n<p>Describing itself as if &quot;4chan found a Bloomberg terminal,&quot; the forum&#39;s giddy nihilism, inscrutable language and memes fueled a war on a perceived corrupted mainstream.</p>\n\n<p>And it&#39;s led WallStreetBets&#39; evolution into an unprecedented force of retail-investing financial radicalism, offering the allure of get-rich-quick gains to a rapidly expanding audience of millions. (5, at last count).</p>",
+      "tags": [2],
+      "presentation_image": ""
+    }
+  }
+
+]

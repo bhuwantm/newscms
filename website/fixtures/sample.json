@@ -1,0 +1,14 @@
+[
+  {
+    "model": "website.Social",
+    "pk": 1,
+    "fields": {
+      "youtube": "https://www.youtube.com",
+      "twitter": "https://www.twitter.com",
+      "instagram": "https://www.instagram.com",
+      "facebook": "https://www.facebook.com",
+      "linkedin": "https://www.linkedin.com",
+      "reddit": "https://www.reddit.com"
+    }
+  }
+]

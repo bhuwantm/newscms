@@ -8,6 +8,7 @@ class NewsCategory(models.Model):
     name = models.CharField(max_length=50)
     display_name = models.CharField(max_length=200)
     description = models.TextField(null=True, blank=True)
+    is_active = models.BooleanField(default=True)
 
     class Meta:
         verbose_name = 'News Category'

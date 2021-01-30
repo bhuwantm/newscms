@@ -3,7 +3,7 @@ from website.models import Social
 
 
 def new_context_processor(request):
-    category_list = NewsCategory.objects.all()
+    category_list = NewsCategory.objects.filter(is_active=True)
     social_links = Social.objects.last()
 
     return {

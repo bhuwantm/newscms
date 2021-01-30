@@ -2,7 +2,7 @@
 
 <nav class="logo-container my-2">
     <a class="navbar-logo" href="{% url 'landing_page' %}">
-        <img src="{% static 'images/logo_small.png' %}" />
+        <img src="{% static 'images/no_img.png' %}" alt="Logo" />
     </a>
 </nav>
 
@@ -27,9 +27,9 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     {% if is_home %}
-                        <a class="nav-link text-offwhite active" href="{% url 'landing_page' %}">गृह पृष्ठ</a>
+                        <a class="nav-link text-offwhite active" href="{% url 'landing_page' %}">Home</a>
                     {% else %}
-                        <a class="nav-link text-offwhite" href="{% url 'landing_page' %}">गृह पृष्ठ</a>
+                        <a class="nav-link text-offwhite" href="{% url 'landing_page' %}">Home</a>
                     {% endif %}
 
                 </li>

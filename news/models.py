@@ -62,6 +62,7 @@ class News(models.Model):
     class Meta:
         verbose_name = 'News'
         verbose_name_plural = 'News'
+        ordering = ['-date', '-id']
 
     def __str__(self):
         return "{} | {} | {}".format(

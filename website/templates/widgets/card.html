@@ -10,7 +10,7 @@
             <h4 class="card-title">{{ news.title }}</h4>
             <h5 class="text">{{ news.date }}</h5>
             <p class="card-text text-fade">{{ news.synopsis }}</p>
-            <a href="{% url 'single_page' news.id %}">Complete News</a>
+            <a class="no-decoration" href="{% url 'single_page' news.id %}">More <i class="fas fa-chevron-right"></i></a>
         </div>
         <div class="card-footer text-fade news-counters">
             <div><i class="far fa-thumbs-up"></i> {{ news.likes_counter }}</div>

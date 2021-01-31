@@ -1,20 +1,28 @@
 from django.shortcuts import render
+from django.shortcuts import render
 from django.views import View
 
-from news.models import News, Tags, NewsCategory, Ads
+from news.models import News, NewsCategory, Ads
 from website.mixin import GlobalPaginator
 
 
 class LandingPage(View):
     def get(self, request):
-        news_list = News.objects.all()
-        headline_list = News.objects.filter(tags__in=Tags.objects.filter(name="Headline"))
-        recent_list = News.objects.filter(tags__in=Tags.objects.filter(name="Recent"))
+        news_list = News.objects.all().order_by('-date')[:4]
+
+        headline_list = News.objects.filter(tags__name="Headline")[:4]
+        headline_list_pinned = News.objects.filter(tags__name="Headline").filter(tags__name="Pinned")
+
+        recent_list = News.objects.filter(tags__name="Recent")[:4]
+        recent_list_pinned = News.objects.filter(tags__name="Recent").filter(tags__name="Pinned")
+
         ads_list = Ads.objects.all()
         return render(request, 'landing.html', {
             'news_list': news_list,
             'headline_list': headline_list,
+            'headline_list_pinned': headline_list_pinned,
             'recent_list': recent_list,
+            'recent_list_pinned': recent_list_pinned,
             'ads_list': ads_list,
             'is_home': True
         })

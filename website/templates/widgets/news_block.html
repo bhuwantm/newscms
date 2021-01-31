@@ -4,13 +4,14 @@
     <div class="col-lg-8">
         <div>
             {% for news in news_list %}
-                <div class="mb-4 row">
+                <div class="row">
+                    {% if not forloop.first %}<hr class="col-md-12"/>{% endif %}
                     {% include 'widgets/news_single_summary.html' with news=news %}
                 </div>
             {% endfor %}
         </div>
     </div>
     <div class="col-lg-4 pl-4">
-        {% include 'widgets/list_widget.html' with title='Other '|add:title news_list=news_list %}
+        {% include 'widgets/list_widget.html' with title=title news_list=pinned_list %}
     </div>
 </div>

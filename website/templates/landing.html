@@ -3,12 +3,12 @@
 {% block content_top %}
 
     {% if headline_list %}
-        {% include 'widgets/news_block.html' with title='Headlines' news_list=headline_list %}
+        {% include 'widgets/news_block.html' with title='Headlines' news_list=headline_list pinned_list=headline_list_pinned %}
         {% include 'widgets/ads_x.html' with ads=ads_list %}
     {% endif %}
 
     {% if recent_list %}
-        {% include 'widgets/news_block.html' with title='Recent News' news_list=recent_list %}
+        {% include 'widgets/news_block.html' with title='Recent News' news_list=recent_list pinned_list=recent_list_pinned %}
         {% include 'widgets/ads_x.html' with ads=ads_list %}
     {% endif %}
 

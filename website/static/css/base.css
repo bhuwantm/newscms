@@ -4,7 +4,7 @@ body{
     margin: 0;
     overflow-x: hidden;
     color: #555;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .nav-link{
@@ -25,23 +25,27 @@ h1, h2, h3, h4, h5{
 }
 
 h1{
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
+    line-height: 2rem !important;
 }
 
 h2{
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 600;
+    line-height: 1.9rem !important;
 }
 
 h3{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 600;
+    line-height: 1.8rem !important;
 }
 
 h4{
     font-size: 1.1rem;
     font-weight: 600;
+    line-height: 1.5rem !important;
 }
 
 h5{
@@ -56,8 +60,9 @@ ul{
 
 .navbar-logo{
     display: block;
-    width: 200px;
+    width: 150px;
     margin: 0 auto;
+
 }
 
 .navbar-logo img{
@@ -254,4 +259,13 @@ footer a:hover {
 
 .navbar-cat .navbar-nav .nav-item:first-child{
     margin-left: -1rem;
+}
+
+.rich-text ul{
+    list-style: disc;
+    padding-left: 3rem;
+}
+
+.rich-text ul li{
+    font-size: 1rem;
 }

@@ -6,4 +6,4 @@ Tools:
 * Django
 * WYSIWIG using Django CK editor
 
-Use manage.py loaddata sample.json for populating with sample data.
+Use "manage.py loaddata sample.json" for populating with sample data.
